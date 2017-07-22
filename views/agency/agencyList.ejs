@@ -1,0 +1,40 @@
+    <!-- Page Content -->
+<div class="container">
+
+        <!-- Page Heading/Breadcrumbs -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Agencies
+                    
+                </h1>
+                
+            </div>
+        </div>
+        <!-- /.row -->
+        
+
+
+        <div class="row"> 
+             <% agencyList.forEach((oneAgency) => { %>
+                <div class="col-md-4">
+                    <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4> <%= oneAgency.nameAgency%></h4>
+                        <div class="checkbox">
+                            <label>
+                <input type="checkbox" name="checkedAgency" ng-model="formData.checked" ng-true-value="yes" ng-false-value="no">use this
+            </label>
+        </div>
+                    </div>
+                    <div class="col-md-12 col-sm-6">
+                    <a href=" agency/<%= oneAgency._id %>">details</a>
+                            
+                    </div>
+                    </div>
+                </div>
+            <% }) %>
+        </div>
+</div>
+  
+
+

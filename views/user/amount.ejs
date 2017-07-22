@@ -1,0 +1,20 @@
+<h3>How much are you sending to <%= theFamily.name%> <%= theFamily.firstApell%> </h3>
+
+ <h4> <%= theFamily.name%> <%= theFamily.firstApell%> <%= theFamily.secondApell%></h4>
+<h4> <%= theFamily.parentesco%> <%= theFamily.address%> <%= theFamily.email%></h4>
+
+        <form method="post" action="/relative/new">
+            <div class="control-group form-group">
+                <div class="controls">
+                    <label for="name-input">Amount in USD </label>
+                    <input type="text" class="form-control" id="relativeName" name="relativeName">
+                    <p class="help-block"></p>
+                </div>
+            </div>
+            <div class="control-group form-group">
+                <div class="controls">
+                    <label for="name-input"> Amount in CUC </label>
+                    <input type="text" class="form-control" id="relativeName" name="relativeName">
+                    <p class="help-block"></p>
+                </div>
+            </div>

@@ -1,0 +1,44 @@
+<div id="banner">
+    <h1>link view for plaid</h1>
+</div>
+
+<button id="link-btn">Link Account</button>
+
+<!--<div id="app">
+  <div class="box">
+    <button id="get-accounts-btn">Get Accounts</button>
+      <div id="get-accounts-data"></div>
+</div>-->
+
+
+<script src="https://cdn.plaid.com/link/v2/stable/link-initialize.js"></script>
+<script>
+  $(function(){
+    var handler = Plaid.create({
+      apiVersion: 'v2',
+      clientName: 'Plaid Walkthrough Demo',
+      env: '<%= PLAID_ENV %>',
+      product: ['transactions'],
+      key: '<%= PLAID_PUBLIC_KEY %>',
+      //isWebview:false,
+      onSuccess: function(public_token) {
+        $.post('/accountPlaid/get_access_token', {
+          public_token: public_token
+        }, function() {
+           $.post('/accountPlaid/accounts/get',function(data) {
+              consoel.log(data);
+            }).fail(function(){
+              console.log("error in accounts")
+            });
+        });
+      },
+    });
+
+    $('#link-btn').on('click', function(e) {
+      handler.open();
+    });
+
+
+
+  })
+  </script>

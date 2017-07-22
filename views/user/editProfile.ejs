@@ -1,0 +1,31 @@
+    <div class="col-md-6">
+<h5>PRofile Edition shoul be an angular call to show the form</h5>
+        <form method="" action="">
+            <div class="control-group form-group">
+                <div class="controls">
+                <label for="name-input"> Your Name </label>
+                <input type="text" class="form-control" id="name-input" name="profileName" value="<%= user.name %>">
+                <p class="help-block"></p>
+                </div>
+            </div>
+            <div class="control-group form-group">
+                <div class="controls">
+                    <label for="username-input"> Account Name </label>
+                    <input class="form-control"  type="text" name="profileUsername" id="username-input" value="<%= user.username %>">
+                </div>
+            </div>
+            <div class="control-group form-group">
+                <div class="controls">
+                <label for="current-password-input"> Current Password </label>
+                <input  class="form-control" id="current-password-input" type="password" name="profileCurrentPassword">
+                </div>
+            </div>
+            <div class="control-group form-group">
+                <label for="new-password-input"> New Password </label>
+                <input class="form-control"  id="new-password-input" type="password" name="profileNewPassword">
+            </div>
+            <div id="success"></div>
+            <!-- For success/fail messages -->
+            <button type="submit" class="btn btn-primary">Submit edition</button>
+        </form>
+        </div>

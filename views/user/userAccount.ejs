@@ -1,0 +1,38 @@
+
+    <!-- Page Content -->
+    <div class="container">
+
+      
+
+        <!-- Projects Row -->
+        <div class="row">  
+            <hr>
+            <% if (myAccountPhotoList.length === 0) { %>
+            <h2> You Don't Have photos Yet </h2>
+            <% } else { %>
+              <h2> Your Photos </h2>
+
+
+            <% myAccountPhotoList.forEach((onePhoto) => { %>
+            <div class="col-md-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                        <h4> <%= onePhoto.photoTitle%></h4>
+                        </div>
+                        <div class="col-md-12 col-sm-6">
+                            <a href="/photo/<%= onePhoto._id %>">
+                            <img class="img-responsive img-portfolio img-hover" src='<%=onePhoto.imageUrl%>' alt="">
+                            </a>
+                        </div>
+                    </div>
+            </div>
+            <% }) %>
+        </div>
+    <% } %>
+<p>the add licence should be a new angular component </p>
+<a class="btn btn-primary" href="/photo/new">Add licence scan</i></a>
+    </div>
+
+  
+
+

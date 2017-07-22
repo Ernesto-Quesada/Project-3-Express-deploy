@@ -1,0 +1,42 @@
+<div class="container">
+<h2>Edit photo</h2>
+  <div class="row">
+            <div class="col-md-8">
+               
+                <form method="post"  action="/photo/<%= photo._id %> ">
+
+                    <div class="control-group form-group">
+                        <div class="controls">
+                            <label for="photoTitle">Title</label>
+                            <input type="text" class="form-control" id="photoTitle" type="text" name="photoTitle" value="<%= photo.photoTitle%>">
+                            <p class="help-block"></p>
+                        </div>
+                    </div>
+
+
+                    <div class="control-group form-group">
+                        <div class="controls">
+                            <label for="yearTaken"> Year: </label>
+                            <input class="form-control" type="number" name="yearTaken" id="yearTaken">
+                        </div>
+                    </div>
+                    
+                    <div class="control-group form-group">
+                        <div class="controls">
+                            <label for="description"> Description </label>
+                            <textarea rows="10" cols="100" class="form-control" id="description" name="description" placeholder="<%= photo.description%>"></textarea>
+                        </div>
+                    </div>
+                    <div id="success"></div>
+                    <!-- For success/fail messages -->
+                    <button type="submit" class="btn btn-primary">Submit edition</button>
+                </form>
+            </div>
+            <br>
+            <div class="col-md-4">
+                <img class="img-responsive" src="<%= photo.imageUrl%>" alt="">
+            </div>
+
+        </div>
+            
+</div>

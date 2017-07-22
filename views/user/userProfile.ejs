@@ -1,0 +1,30 @@
+<div class="container">
+<h2>Your Profile </h2>
+<div class="row">
+    <div class="col-md-6">
+        <div class="control-group form-group">
+            <div class="controls">
+                <p> First Name : <span><%= user.firstName %></span></p>
+                <p> Last Name : <span><%= user.lastName %></span></p>
+                <p> email : <span><%= user.email%></span></p>
+                <p> phone : <span><%= user.phone %></span></p>
+                <p> Country : <span><%= user.country%></span></p>
+                <p> user : <span><%= user._id %></span></p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row"> 
+    <h2>A que RELATIVE desea mandarle dinero</h2>
+        <% relativeList.forEach((oneRelative) => { %>
+            <div class="col-md-4">
+                <a href="/useramount/<%= oneRelative._id %>">
+                   <h4> <%= oneRelative.name%> <%= oneRelative.firstApell%> <%= oneRelative.secondApell%></h4>
+                </a>
+            </div>
+         <% }) %>
+</div>
+
+        <a class="btn btn-primary" href="/relative/new">Add a relative</i></a>
+        <a class="btn btn-primary" href="/agencies">Choose an agency</i></a>
+</div>

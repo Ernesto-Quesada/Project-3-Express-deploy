@@ -1,0 +1,40 @@
+
+
+
+
+<br>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4">
+                <div class="login-panel panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Please Login In</h3>
+                    </div>
+                    <% if (errorMessage.length > 0) { %>
+                    <div class="error"> <%= errorMessage %> </div>
+                    <% } %>
+                    <div class="panel-body">
+                        <form method="post" action="/login">
+                            <fieldset>
+                                <div class="form-group">
+                                    <label for="emailInput"> Account EMAIL </label>
+                                    <input id="emailInput" class="form-control" placeholder="email" type='text' name="loginEmailInput" autofocus>
+                                </div>
+                                <div class="form-group">
+                                    <label for="password-input"> Password </label>
+                                    <input id="password-input" class="form-control" placeholder="Password" name="loginPassword" type="password">
+                                </div>
+                                
+                                <!-- Change this to a button or input when using this as a form -->
+                                <button class="btn btn-lg btn-success btn-block">Login</button>
+                            </fieldset>
+                        </form>
+                    <h4>  Don't have an account?<a href="/signup" class="btn btn-lg btn-primary btn-block">Sign Up </a></h4>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
